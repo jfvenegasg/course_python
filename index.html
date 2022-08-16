@@ -18833,7 +18833,8 @@ La diferencia entre a y b es 10 La diferencia entre a y c es 20 y la diferencia 
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="Funciones-aplicadas-a-otras-funciones">Funciones aplicadas a otras funciones<a class="anchor-link" href="#Funciones-aplicadas-a-otras-funciones">&#182;</a></h4>
+<h4 id="Funciones-aplicadas-a-otras-funciones">Funciones aplicadas a otras funciones<a class="anchor-link" href="#Funciones-aplicadas-a-otras-funciones">&#182;</a></h4><p>Pero aún podemos complicar las funciones un poco mas...En muchos casos utilizaremos funciones para tareas especificas,pero en otros podriamos necesitar aplicar a una función otra función de forma inmediata,de esa forma a la salida de la primera se le aplicara una nueva función.Si creamos una primera función multi_1(x), la que multiplica por 2 el valor de entrada podriamos modificar la salida con una nueva función multi_2(fn)</p>
+
 </div>
 </div>
 </div>
@@ -18842,20 +18843,21 @@ La diferencia entre a y b es 10 La diferencia entre a y c es 20 y la diferencia 
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">multi1</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">multi_1</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
+    <span class="sd">"""Esta primera función solo multiplica por 2 la variable de entrada,por defecto el valor de entrada esta fijado en 2"""</span>
     <span class="n">y</span><span class="o">=</span><span class="n">x</span><span class="o">*</span><span class="mi">2</span>
     <span class="k">return</span> <span class="n">y</span>
 
-<span class="k">def</span> <span class="nf">multi2</span><span class="p">(</span><span class="n">fn</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">multi_2</span><span class="p">(</span><span class="n">fn</span><span class="p">):</span>
     <span class="sd">""" Esta funcion toma la salida de otra funcion y la multiplica por 2"""</span>
-    <span class="n">z</span><span class="o">=</span><span class="n">fn</span><span class="o">*</span><span class="mi">2</span>
+    <span class="n">z</span><span class="o">=</span><span class="n">fn</span><span class="o">*</span><span class="mi">3</span>
     <span class="k">return</span> <span class="n">z</span>
 
 
-<span class="n">multi2</span><span class="p">(</span><span class="n">multi1</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">multi_2</span><span class="p">(</span><span class="n">multi_1</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -18873,13 +18875,13 @@ La diferencia entre a y b es 10 La diferencia entre a y c es 20 y la diferencia 
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[20]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>40</pre>
+<pre>60</pre>
 </div>
 
 </div>
@@ -18895,8 +18897,22 @@ La diferencia entre a y b es 10 La diferencia entre a y c es 20 y la diferencia 
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Asi podemos llamar a una función dentro de otra,en este caso al dar el valor de entrada como 10 a la función <strong>multi_1()</strong>,esta lo multiplica por 10 y devuelve un 20.Asi luego este valor 20 lo toma la función <strong>multi_2()</strong> y lo multiplica por <strong>3</strong>,obteniendo asi el valor <strong>60</strong> que se muestra por pantalla.</p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><a id='Booleanos-y-condicionales'></a></p>
 <h3 id="Booleanos-y-condicionales-%F0%9F%95%B9">Booleanos y condicionales &#128377;<a class="anchor-link" href="#Booleanos-y-condicionales-%F0%9F%95%B9">&#182;</a></h3><p><a href="#Indice">Inicio ▲</a></p>
+<p>Ya vimos que en python existen distintos tipos de variables como "integer" y "string",pero no siempre trabajaremos con numeros o texto.Podemos utilizar las variables <strong>"bool"</strong>,las cuales tienen 2 posibles valores <strong>"True"</strong> o <strong>"False"</strong>.</p>
+<p>Asi las podemos obtener como salida de otras funciones,pero tambien las podemos definir y validar el tipo de variable.</p>
 
 </div>
 </div>
@@ -18906,16 +18922,12 @@ La diferencia entre a y b es 10 La diferencia entre a y c es 20 y la diferencia 
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="kc">True</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
-
-<span class="n">y</span><span class="o">=</span><span class="kc">False</span>
-
-<span class="n">x</span><span class="o">!=</span><span class="n">y</span>
 </pre></div>
 
      </div>
@@ -18943,40 +18955,137 @@ La diferencia entre a y b es 10 La diferencia entre a y c es 20 y la diferencia 
 </div>
 </div>
 
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[21]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>True</pre>
 </div>
 
 </div>
 
 </div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Asi podemos ver que el valor de x,es <strong>"Verdadero"</strong> y al validar el tipo de variables que es x,nos devuelve por pantalla que es <strong>"bool"</strong> o "booleano".</p>
+<p>Tambien podemos definir otras variables y verificar si sus valores son iguales o distintos.</p>
 
 </div>
-
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">presidente</span><span class="p">(</span><span class="n">edad</span><span class="p">):</span>
-    <span class="sd">""" define si el presidente es merluzo """</span>
-    <span class="k">if</span> <span class="n">edad</span><span class="o">&gt;</span><span class="mi">35</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">"El presidente no es merluzo"</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span> 
-        <span class="nb">print</span><span class="p">(</span><span class="s2">"El presidente es merluzo"</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">y</span><span class="o">=</span><span class="kc">False</span>
 
-<span class="n">presidente</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+<span class="n">x</span><span class="o">==</span><span class="n">y</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>False</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>En este caso al definir una nueva variable y como <strong>"False"</strong>,podemos observar que al verificar con el signo <strong>"=="</strong> si son iguales,se nos devuelve el valor "False".</p>
+<p>Sin embargo podemos utilizar varios operadores entre variables booleanas según corresponda.</p>
+<table>
+<thead><tr>
+<th>Operación</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x == y</td>
+<td>x es igual y</td>
+<td></td>
+</tr>
+<tr>
+<td>x &lt; y</td>
+<td>x es menor y</td>
+<td></td>
+</tr>
+<tr>
+<td>x &lt;= y</td>
+<td>x es menor o igual que y</td>
+<td></td>
+</tr>
+<tr>
+<td>x != y</td>
+<td>x no es igual a y</td>
+<td></td>
+</tr>
+<tr>
+<td>x &gt; y</td>
+<td>x es mayor que y</td>
+<td></td>
+</tr>
+<tr>
+<td>x &gt;= y</td>
+<td>x es mayor o igual que y</td>
+</tr>
+</tbody>
+</table>
+<p>Asi podemos integrar este tipo de variables y las operaciones ya definidas en alguna función que quisieramos que realizara algun procedimiento mas extenso.</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">cajero</span><span class="p">(</span><span class="n">tarjeta</span><span class="p">):</span>
+    <span class="sd">""" La función permite validar si el tarjeta tiene saldo o no """</span>
+    
+    <span class="n">saldo</span><span class="o">=</span><span class="mi">100</span>
+    <span class="k">if</span> <span class="n">tarjeta</span><span class="o">==</span><span class="kc">True</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">print</span><span class="p">(</span><span class="s2">"Su saldo es de"</span><span class="p">,</span><span class="n">saldo</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span> 
+        <span class="k">return</span> <span class="nb">print</span><span class="p">(</span><span class="s2">"No se puede verificar su saldo en este momento"</span><span class="p">)</span>
+              
+
+<span class="n">cajero</span><span class="p">(</span><span class="n">tarjeta</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -18998,7 +19107,7 @@ La diferencia entre a y b es 10 La diferencia entre a y c es 20 y la diferencia 
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>El presidente es merluzo
+<pre>Su saldo es de 100
 </pre>
 </div>
 </div>
@@ -19007,6 +19116,18 @@ La diferencia entre a y b es 10 La diferencia entre a y c es 20 y la diferencia 
 
 </div>
 
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Asi se puede verificar que si la variable <strong>tarjeta</strong> tiene el valor <strong>verdadero</strong> en el cajero,la función cajero devuelve el mensaje <strong>"Su saldo es de 100"</strong> y en caso contrario no puede validar el saldo.</p>
+
+</div>
+</div>
+</div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
