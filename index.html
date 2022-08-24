@@ -21031,7 +21031,7 @@ El sabado no se trabaja
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">numeros</span><span class="o">=</span><span class="p">{</span><span class="s2">"uno"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">"dos"</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="s2">"tres"</span><span class="p">:</span><span class="mi">3</span><span class="p">}</span>
@@ -21054,7 +21054,7 @@ El sabado no se trabaja
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[2]:</div>
 
 
 
@@ -21298,7 +21298,7 @@ El sabado no se trabaja
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">O</span> <span class="n">incluso</span> <span class="n">validar</span> <span class="n">si</span> <span class="n">un</span> <span class="n">valor</span> <span class="n">se</span> <span class="n">encuentra</span> <span class="n">en</span> <span class="n">el</span> <span class="n">diccionario</span><span class="o">.</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">O</span> <span class="n">incluso</span> <span class="n">validar</span> <span class="n">si</span> <span class="n">una</span> <span class="n">llave</span> <span class="n">se</span> <span class="n">encuentra</span> <span class="n">en</span> <span class="n">el</span> <span class="n">diccionario</span><span class="o">.</span>
 </pre></div>
 
      </div>
@@ -21393,16 +21393,10 @@ El sabado no se trabaja
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dias</span><span class="o">=</span><span class="p">[</span><span class="s2">"lunes"</span><span class="p">,</span><span class="s2">"martes"</span><span class="p">,</span><span class="s2">"miercoles"</span><span class="p">,</span><span class="s2">"jueves"</span><span class="p">,</span><span class="s2">"viernes"</span><span class="p">]</span>
-
-<span class="n">dias_json</span><span class="o">=</span><span class="p">{</span><span class="n">dia</span><span class="p">:</span><span class="n">dia</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">dia</span> <span class="ow">in</span> <span class="n">dias</span><span class="p">}</span>
-<span class="n">dias_json</span>
-
-<span class="n">numeros</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
-<span class="n">numeros</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">numeros</span>
 </pre></div>
 
      </div>
@@ -21420,13 +21414,13 @@ El sabado no se trabaja
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[28]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>dict_items([(&#39;uno&#39;, &#39;Lunes&#39;), (&#39;dos&#39;, 2), (&#39;tres&#39;, 3), (&#39;cuatro&#39;, 4)])</pre>
+<pre>{&#39;uno&#39;: 1, &#39;dos&#39;: 2, &#39;tres&#39;: 3}</pre>
 </div>
 
 </div>
@@ -21442,66 +21436,197 @@ El sabado no se trabaja
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Algunos otras operaciones que podemos hacer en Python,es renombrar los valores de un diccionario mediante una iteración de los valores de las llaves del mismo diccionario.</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dias</span><span class="o">=</span><span class="p">[</span><span class="s2">"lunes"</span><span class="p">,</span><span class="s2">"martes"</span><span class="p">,</span><span class="s2">"miercoles"</span><span class="p">,</span><span class="s2">"jueves"</span><span class="p">,</span><span class="s2">"viernes"</span><span class="p">]</span>
+
+<span class="n">dias_json</span><span class="o">=</span><span class="p">{</span><span class="n">dia</span><span class="p">:</span><span class="n">dia</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">dia</span> <span class="ow">in</span> <span class="n">dias</span><span class="p">}</span>
+<span class="n">dias_json</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>{&#39;lunes&#39;: &#39;l&#39;, &#39;martes&#39;: &#39;m&#39;, &#39;miercoles&#39;: &#39;m&#39;, &#39;jueves&#39;: &#39;j&#39;, &#39;viernes&#39;: &#39;v&#39;}</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>En este caso, se creo un diccionario en donde sus llaves son los dias de la semana y los valores corresponden a a cada uno de los primeros caracteres de las llaves.</p>
+<p>Pero incluso el valor podria ser una versión mas corta del nombre de la llave o una pequeña descripción si fuera el caso.En este caso al cambiar la cantidad de caracteres a seleccionar de <strong>dia[0]</strong> a <strong>dia[0:3]</strong>, se pasa de solo considerar la primera letra a las 3 primeras.</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dias</span><span class="o">=</span><span class="p">[</span><span class="s2">"lunes"</span><span class="p">,</span><span class="s2">"martes"</span><span class="p">,</span><span class="s2">"miercoles"</span><span class="p">,</span><span class="s2">"jueves"</span><span class="p">,</span><span class="s2">"viernes"</span><span class="p">]</span>
+
+<span class="n">dias_json</span><span class="o">=</span><span class="p">{</span><span class="n">dia</span><span class="p">:</span><span class="n">dia</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="k">for</span> <span class="n">dia</span> <span class="ow">in</span> <span class="n">dias</span><span class="p">}</span>
+<span class="n">dias_json</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>{&#39;lunes&#39;: &#39;lun&#39;,
+ &#39;martes&#39;: &#39;mar&#39;,
+ &#39;miercoles&#39;: &#39;mie&#39;,
+ &#39;jueves&#39;: &#39;jue&#39;,
+ &#39;viernes&#39;: &#39;vie&#39;}</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Finalmente, si quisieramos podriamos utilizar métodos sobre los diccionarios que hemos creado para realizar algunas tareas sencillas.</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dias_json</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>dict_values([&#39;lun&#39;, &#39;mar&#39;, &#39;mie&#39;, &#39;jue&#39;, &#39;vie&#39;])</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>En este caso se utilizo el método <strong>.values()</strong> para mostrar por pantalla todos los valores del diccionario.</p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><a id='Trabajando-con-librerias'></a></p>
 <h3 id="Trabajando-con-librerias-%F0%9F%8E%AE">Trabajando con librerias &#127918;<a class="anchor-link" href="#Trabajando-con-librerias-%F0%9F%8E%AE">&#182;</a></h3><p><a href="#Indice">Inicio ▲</a></p>
+<p>Y llegamos al último tópico de este curso introductorio 🎉</p>
+<p>Hay varios temas que hemos tocado en este curso desde la declaración de variables numéricas,string y booleanas e incluso algunas estructuras de datos.Pero aún queda ver como podemos trabajar con librerías dentro del entorno de Python las cuales son muy importantes si queremos extender las capacidades de Python,si bien no veremos todas las librerías que se pueden utilizar en Python ya que son muchas,las cuales van desde la definición de variables numéricas,desarrollo de gráficas,conexión a bases de datos,desarrollo de interfaces de usuario e incluso el uso de modelos de machine learning y darian para material de un curso mas avanzado.Sin embargo, veremos 3 librerías ampliamente usadas tanto en la industria como en la academia.</p>
+<p>La primera es <strong>Numpy</strong> la que es una librería especializada en cálculo numérico y el análisis de datos,uno de los aspectos mas importante es que se puede definir una estructura de dato llamada <strong>arrays</strong> los cuales se procesan mucho mas rápido que las listas que por defecto maneja Python 🙄.La segunda es <strong>Matplotlib</strong> que es una librería estándar para comenzar a desarrollar visualizaciones en Python y la tercera es <strong>Plotly</strong> otra librería de visualización,la que personalmente me gusta por su sintáxis, simplicidad y por que además tambien se encuentra implementada para el Software R.</p>
 
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
-<span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">log</span><span class="p">)</span>
-<span class="n">math</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="n">help</span><span class="p">(</span><span class="n">math</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">math</span> <span class="k">as</span> <span class="nn">mt</span>
-
-<span class="n">mt</span><span class="o">.</span><span class="n">pi</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
