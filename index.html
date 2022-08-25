@@ -22112,25 +22112,43 @@ El sabado no se trabaja
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Librer%C3%ADa-Matplotlib">Librer&#237;a Matplotlib<a class="anchor-link" href="#Librer%C3%ADa-Matplotlib">&#182;</a></h2>
+<h2 id="Librer%C3%ADa-Matplotlib">Librer&#237;a Matplotlib<a class="anchor-link" href="#Librer%C3%ADa-Matplotlib">&#182;</a></h2><p>Ha llegado el momento...🥁  hasta ahora hemos visto la definición de variables de distinto tipo asi como estruturas de datos,entre otros aspectos reelevantes en Python,incluso ya cargamos <strong>Numpy</strong>...nuestra primera libreria.</p>
+<p>Pero ahora toca el turno de utilizar la libreria Matplotlib,la cual es una libreria desarrollada para la creación de gráficos.Cabe destacar que no es la unica libreria para desarrollo de gráficos.</p>
+<p>Alguno de los gráficos que se pueden desarrollar con Matplotlib y que veremos son los siguientes:</p>
+<ul>
+<li>Diagramas de dispersión</li>
+<li>Diagramas de lineas</li>
+<li>Diagramas de cajas</li>
+<li>Diagramas de barras</li>
+<li>Histograma</li>
+</ul>
+<p>Uno de los gráficos mas utilizados son los diagramas de dispersión,ya que rapidamente nos permite visualizar como se distribuyen los datos en el espacio.En algunos casos tendremos que utilizar otros gráficos para representar de mejor forma la información,pero es un buen punto de partida. 💡</p>
+
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Traemos el módulo pyplot de forma abreviada como plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
-<span class="n">a</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">b</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="c1">#Se crea la figura y los ejes</span>
+<span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
 
-<span class="n">c</span><span class="o">=</span><span class="n">a</span><span class="o">+</span><span class="n">b</span>
-<span class="n">c</span>
+<span class="c1">#Se definen los puntos tanto del eje x como del y donde diagrama</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mf">1.5</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mf">2.5</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span><span class="n">y</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mf">1.5</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mf">1.5</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="c1">#Opcionalmente podemos definir el tamaño de la figura</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+
+<span class="c1">#Finalmente mostramos el grafico</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -22138,6 +22156,100 @@ El sabado no se trabaja
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedImage jp-OutputArea-output ">
+<img src="data:image/png;base64,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
+"
+class="
+"
+>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Sin embargo para realizar algunos graficos como los ya mencionados,podemos utilizar funciones desarrolladas especificamente para esa tarea,a continuación se muestran:</p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Diagramas-de-dispersi%C3%B3n">Diagramas de dispersi&#243;n<a class="anchor-link" href="#Diagramas-de-dispersi%C3%B3n">&#182;</a></h3>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Diagramas-de-l%C3%ADneas">Diagramas de l&#237;neas<a class="anchor-link" href="#Diagramas-de-l%C3%ADneas">&#182;</a></h3>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Diagramas-de-cajas">Diagramas de cajas<a class="anchor-link" href="#Diagramas-de-cajas">&#182;</a></h3>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Diagramas-de-barras">Diagramas de barras<a class="anchor-link" href="#Diagramas-de-barras">&#182;</a></h3>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Histograma">Histograma<a class="anchor-link" href="#Histograma">&#182;</a></h3>
+</div>
+</div>
+</div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
