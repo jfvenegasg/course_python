@@ -36,6 +36,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .m { color: var(--jp-mirror-editor-number-color) } /* Literal.Number */
 .highlight .s { color: var(--jp-mirror-editor-string-color) } /* Literal.String */
 .highlight .ow { color: var(--jp-mirror-editor-operator-color); font-weight: bold } /* Operator.Word */
+.highlight .pm { color: var(--jp-mirror-editor-punctuation-color) } /* Punctuation.Marker */
 .highlight .w { color: var(--jp-mirror-editor-variable-color) } /* Text.Whitespace */
 .highlight .mb { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Bin */
 .highlight .mf { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Float */
@@ -17720,10 +17721,6 @@ a.anchor-link {
   display: none;
 }
 
-.highlight  {
-  margin: 0.4em;
-}
-
 /* Input area styling */
 .jp-InputArea {
   overflow: hidden;
@@ -17733,9 +17730,26 @@ a.anchor-link {
   overflow: hidden;
 }
 
-.CodeMirror pre {
+.CodeMirror.cm-s-jupyter .highlight pre {
+/* weird, but --jp-code-padding defined to be 5px but 4px horizontal padding is hardcoded for pre.CodeMirror-line */
+  padding: var(--jp-code-padding) 4px;
   margin: 0;
-  padding: 0;
+
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+
+}
+
+.jp-OutputArea-output pre {
+  line-height: inherit;
+  font-family: inherit;
+}
+
+.jp-RenderedText pre {
+  color: var(--jp-content-font-color1);
+  font-size: var(--jp-code-font-size);
 }
 
 /* Using table instead of flexbox so that we can use break-inside property */
@@ -17846,8 +17860,8 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><center>
-<img src=https://www.palermo.edu/Archivos_content/2021/negocios/julio/data/datascience-640.jpg></p>
+<center>
+<img src=https://www.palermo.edu/Archivos_content/2021/negocios/julio/data/datascience-640.jpg>
 
 </div>
 </div>
@@ -17873,7 +17887,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <ul>
 <li>Reconocer los usos del lenguaje python para sus usos en data science</li>
 <li>Comprender los conceptos y funcionalidades básicas</li>
-<li>Desarrollo de código para su posterior uso.</li>
+<li>Desarrollo de código para su posterior uso</li>
 </ul>
 
 </div>
@@ -17912,7 +17926,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <h3 id="Hola-Python-%F0%9F%9A%80">Hola Python &#128640;<a class="anchor-link" href="#Hola-Python-%F0%9F%9A%80">&#182;</a></h3><p><a href="#Indice">Inicio ▲</a></p>
 <p>Este curso introductorio cubre los aspectos básicos del lenguaje que necesitas para iniciar en el área de Data Science con Python.Este curso esta dedicado principalmente para aquellos que ya tienen alguna experiencia con código o incluso otro lenguaje como R,Julia,Matlab,entre otros.</p>
 <p>Primero comenzaremos con la sintáxis de Python,asi como la asignación de variables y operaciones aritméticas.</p>
-<p>Generalmente en un proyecto de data science,necesitamos exponer resultados de modelos,graficos y/o analisis.De esta forma un primer mensaje que podria desarrollar,seria que nuestro proyecto fue exitoso,para esto debemos definir la variable en donde guardaremos el mensaje "El proyecto fue exitoso".</p>
+<p>Generalmente en un proyecto de data science,necesitamos exponer resultados de modelos,graficos y/o analisis.De esta forma un primer mensaje que podria desarrollar,seria que nuestro proyecto fue exitoso,para esto debemos definir la variable en donde guardaremos el mensaje &quot;El proyecto fue exitoso&quot;.</p>
 
 </div>
 </div>
@@ -17940,9 +17954,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -17966,7 +17978,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Como pueden ver exponer resultados en python,no es tan dificil como podriamos pensar.</p>
 <p>Asi como en bloque de codigo anterior,en Python se puede trabajar con distintos tipos de variables:Númericas,String,entre otros subtipos.Pero cabe destacar que cuando hablamos de variables numericas,con ellas podemos realizar todo tipo de operaciones aritmeticas y con las variables de tipo String podemos generar textos que muestren la salida de un proceso exitoso o incluso generar documentación.</p>
-<p>A continuación podemos ver un ejemplo de una variable numerica que almacena el valor 25 y un variable de tipo string que guarda el texto "Esta es mi edad"</p>
+<p>A continuación podemos ver un ejemplo de una variable numerica que almacena el valor 25 y un variable de tipo string que guarda el texto &quot;Esta es mi edad&quot;</p>
 
 </div>
 </div>
@@ -18022,9 +18034,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -18073,9 +18083,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
 
@@ -18114,9 +18122,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
 
@@ -18140,7 +18146,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Como podemos ver en la salida del bloque,la variable que almacena el valor numero es de tipo <strong>"int"</strong>,esto es una abreviación para <strong>"integer"</strong> o <strong>"entero"</strong>,en cambio para la variable frase el tipo es <strong>"str"</strong> haciendo referencia a <strong>"string"</strong> o cadena de texto. Sin embargo,tambien podriamos definir una variable que almacene un valor numerico como texto,en este caso no podriamos realizar operaciones aritmeticas con el</p>
+<p>Como podemos ver en la salida del bloque,la variable que almacena el valor numero es de tipo <strong>&quot;int&quot;</strong>,esto es una abreviación para <strong>&quot;integer&quot;</strong> o <strong>&quot;entero&quot;</strong>,en cambio para la variable frase el tipo es <strong>&quot;str&quot;</strong> haciendo referencia a <strong>&quot;string&quot;</strong> o cadena de texto. Sin embargo,tambien podriamos definir una variable que almacene un valor numerico como texto,en este caso no podriamos realizar operaciones aritmeticas con el</p>
 
 </div>
 </div>
@@ -18170,9 +18176,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -18194,7 +18198,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Sin embargo si quisieramos trabajar con variables numéricas con valores decimales como <strong>"30.2"</strong> <strong>"23.4"</strong> u otros podemos definir variable de tipo float.</p>
+<p>Sin embargo si quisieramos trabajar con variables numéricas con valores decimales como <strong>&quot;30.2&quot;</strong> <strong>&quot;23.4&quot;</strong> u otros podemos definir variable de tipo float.</p>
 
 </div>
 </div>
@@ -18224,9 +18228,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -18249,51 +18251,15 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>De esta forma si quisieramos realizar operaciones matematicas con variables de tipo entero o float,se debe ocupar la siguiente sintaxis.</p>
-<table>
-<thead><tr>
-<th>Sintaxis</th>
-<th>Operación</th>
-<th>Descripción</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>x + y</td>
-<td>Adición</td>
-<td>La suma de x e y</td>
-</tr>
-<tr>
-<td>x - y</td>
-<td>Sustracción</td>
-<td>La diferencia entre x e y</td>
-</tr>
-<tr>
-<td>x * y</td>
-<td>Multiplicación</td>
-<td>El producto entre x e y</td>
-</tr>
-<tr>
-<td>x / y</td>
-<td>División</td>
-<td>El cuociente entre x e y.</td>
-</tr>
-<tr>
-<td>x %  y</td>
-<td>Modulo</td>
-<td>El valor entero restante,luego de dividir x entre y.</td>
-</tr>
-<tr>
-<td>x ** y</td>
-<td>Potenciación</td>
-<td>El resultado de elevar x a y.</td>
-</tr>
-<tr>
-<td>-x</td>
-<td>Negación</td>
-<td>El valor negativo de x.</td>
-</tr>
-</tbody>
-</table>
+<p>| Sintaxis | Operación | Descripción |
+| -- | -- | -- |
+| x + y  | Adición     | La suma de x e y |
+| x - y  | Sustracción | La diferencia entre x e y |
+| x * y  | Multiplicación | El producto entre x e y |
+| x / y  | División       | El cuociente entre x e y. |
+| x %  y | Modulo  | El valor entero restante,luego de dividir x entre y. |
+| x ** y | Potenciación | El resultado de elevar x a y. |
+| -x     | Negación | El valor negativo de x. |</p>
 
 </div>
 </div>
@@ -18349,9 +18315,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -18388,9 +18352,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -18427,9 +18389,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -18466,9 +18426,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -18518,9 +18476,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -18561,9 +18517,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -18621,9 +18575,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -18673,9 +18625,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -18701,7 +18651,7 @@ mi_funcion1(nombre)
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>En este caso no se entrega información,por que dentro de la función no existe.Sin embargo,podemos crear la descripción de la función utilizando dentro de ella la triple comillas <strong>"""</strong></p>
+<p>En este caso no se entrega información,por que dentro de la función no existe.Sin embargo,podemos crear la descripción de la función utilizando dentro de ella la triple comillas <strong>&quot;&quot;&quot;</strong></p>
 
 </div>
 </div>
@@ -18736,9 +18686,7 @@ mi_funcion1(nombre)
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -18766,7 +18714,7 @@ mi_funcion1(nombre)
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>A diferencia del códgio anterior, ahora si se muestra de forma explícita que es lo que hace la función, lo cual se agrego en la nueva definición de la función <strong>"mi_función1"</strong>.</p>
+<p>A diferencia del códgio anterior, ahora si se muestra de forma explícita que es lo que hace la función, lo cual se agrego en la nueva definición de la función <strong>&quot;mi_función1&quot;</strong>.</p>
 <p>Pero tambien podemos definir funciones que realicen algunas operaciones mas extensas,asi como operaciones matematicas que tomen distintos valores segun las variables que se le definan a la función.</p>
 <p>En este caso la funcion <strong>diferencia</strong>,determina las diferencias absolutas que existen entre 3 variables <strong>a</strong>,<strong>b</strong> y <strong>c</strong>.Asi, las diferencias se determinan al interior de la función y luego se retornan junto al texto que muestra entre que pares de variables se determinan las diferencias,cabe destacar que para esta función tambien se escribio la ayuda.</p>
 
@@ -18804,9 +18752,7 @@ mi_funcion1(nombre)
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -18871,9 +18817,7 @@ La diferencia entre a y b es 10 La diferencia entre a y c es 20 y la diferencia 
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[19]:</div>
 
@@ -18911,7 +18855,7 @@ La diferencia entre a y b es 10 La diferencia entre a y c es 20 y la diferencia 
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><a id='Booleanos-y-condicionales'></a></p>
 <h3 id="Booleanos-y-condicionales-%F0%9F%95%B9">Booleanos y condicionales &#128377;<a class="anchor-link" href="#Booleanos-y-condicionales-%F0%9F%95%B9">&#182;</a></h3><p><a href="#Indice">Inicio ▲</a></p>
-<p>Ya vimos que en python existen distintos tipos de variables como "integer" y "string",pero no siempre trabajaremos con números o texto.Podemos utilizar las variables <strong>"bool"</strong>,las cuales tienen 2 posibles valores <strong>"True"</strong> o <strong>"False"</strong>.</p>
+<p>Ya vimos que en python existen distintos tipos de variables como &quot;integer&quot; y &quot;string&quot;,pero no siempre trabajaremos con números o texto.Podemos utilizar las variables <strong>&quot;bool&quot;</strong>,las cuales tienen 2 posibles valores <strong>&quot;True&quot;</strong> o <strong>&quot;False&quot;</strong>.</p>
 <p>Estas variables las podemos obtener como salida de otras funciones,pero tambien podemos definir y validar este tipo de variable cada vez que sea necesario.</p>
 
 </div>
@@ -18941,9 +18885,7 @@ La diferencia entre a y b es 10 La diferencia entre a y c es 20 y la diferencia 
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -18966,7 +18908,7 @@ La diferencia entre a y b es 10 La diferencia entre a y c es 20 y la diferencia 
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>En este caso podemos ver que el valor de x,es <strong>"Verdadero"</strong> y al validar el tipo de variables que es x,nos devuelve por pantalla que es <strong>"bool"</strong> o "booleano".</p>
+<p>En este caso podemos ver que el valor de x,es <strong>&quot;Verdadero&quot;</strong> y al validar el tipo de variables que es x,nos devuelve por pantalla que es <strong>&quot;bool&quot;</strong> o &quot;booleano&quot;.</p>
 <p>Tambien podemos definir otras variables y verificar si sus valores son iguales o distintos.</p>
 
 </div>
@@ -18996,9 +18938,7 @@ La diferencia entre a y b es 10 La diferencia entre a y c es 20 y la diferencia 
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[21]:</div>
 
@@ -19022,46 +18962,16 @@ La diferencia entre a y b es 10 La diferencia entre a y c es 20 y la diferencia 
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>En este caso al definir una nueva variable <em>y</em> como <strong>"False"</strong>,podemos observar que al verificar con el signo <strong>"=="</strong> si son iguales,se nos devuelve el valor "False",debido a que x tiene asignado el valor <strong>Verdadero</strong> en cambio y tiene asignado el valor <strong>Falso</strong>.</p>
+<p>En este caso al definir una nueva variable <em>y</em> como <strong>&quot;False&quot;</strong>,podemos observar que al verificar con el signo <strong>&quot;==&quot;</strong> si son iguales,se nos devuelve el valor &quot;False&quot;,debido a que x tiene asignado el valor <strong>Verdadero</strong> en cambio y tiene asignado el valor <strong>Falso</strong>.</p>
 <p>Sin embargo podemos utilizar varios operadores entre variables booleanas según corresponda.</p>
-<table>
-<thead><tr>
-<th>Operación</th>
-<th>Descripción</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>x == y</td>
-<td>x es igual y</td>
-<td></td>
-</tr>
-<tr>
-<td>x &lt; y</td>
-<td>x es menor y</td>
-<td></td>
-</tr>
-<tr>
-<td>x &lt;= y</td>
-<td>x es menor o igual que y</td>
-<td></td>
-</tr>
-<tr>
-<td>x != y</td>
-<td>x no es igual a y</td>
-<td></td>
-</tr>
-<tr>
-<td>x &gt; y</td>
-<td>x es mayor que y</td>
-<td></td>
-</tr>
-<tr>
-<td>x &gt;= y</td>
-<td>x es mayor o igual que y</td>
-</tr>
-</tbody>
-</table>
+<p>| Operación | Descripción |
+| -- | -- |
+|x == y|x es igual y||
+|x &lt; y|x es menor y| |
+|x &lt;= y|x es menor o igual que y||
+|x != y|x no es igual a y||
+|x &gt; y|x es mayor que y||
+|x &gt;= y|x es mayor o igual que y||</p>
 <p>Asi podemos integrar este tipo de variables y las operaciones ya definidas en alguna función que realice algun otro procedimiento mas extenso.</p>
 
 </div>
@@ -19099,9 +19009,7 @@ La diferencia entre a y b es 10 La diferencia entre a y c es 20 y la diferencia 
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -19123,7 +19031,7 @@ La diferencia entre a y b es 10 La diferencia entre a y c es 20 y la diferencia 
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Asi se puede verificar que si la variable <strong>tarjeta</strong> tiene el valor <strong>verdadero</strong> en el cajero,la función cajero devuelve el mensaje <strong>"Su saldo es de 100"</strong> y en caso contrario no puede validar el saldo.</p>
+<p>Asi se puede verificar que si la variable <strong>tarjeta</strong> tiene el valor <strong>verdadero</strong> en el cajero,la función cajero devuelve el mensaje <strong>&quot;Su saldo es de 100&quot;</strong> y en caso contrario no puede validar el saldo.</p>
 
 </div>
 </div>
@@ -19172,9 +19080,7 @@ La diferencia entre a y b es 10 La diferencia entre a y c es 20 y la diferencia 
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -19198,7 +19104,7 @@ La diferencia entre a y b es 10 La diferencia entre a y c es 20 y la diferencia 
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>En este caso la función una vez que se le entrega un valor numérico,es capaz de determinar <em>si es igual a 0</em>,<em>mayor a 0</em> o incluso <em>si es menor que 0</em>.</p>
-<p>Esto se realiza mediante la condición <strong>if</strong>,en donde esta condición if verifica que se cumpla la condición <strong>x==0</strong>,sino se cumple se utiliza la verificación de que sea mayor a 0 con <strong>elif</strong> y si no se cumple ninguna de las 2 anteriores se ejecuta el ultimo bloque de código correspondiente al <strong>print(x,"Es negativo")</strong>.</p>
+<p>Esto se realiza mediante la condición <strong>if</strong>,en donde esta condición if verifica que se cumpla la condición <strong>x==0</strong>,sino se cumple se utiliza la verificación de que sea mayor a 0 con <strong>elif</strong> y si no se cumple ninguna de las 2 anteriores se ejecuta el ultimo bloque de código correspondiente al <strong>print(x,&quot;Es negativo&quot;)</strong>.</p>
 <p>Algunas ultimas consideraciones para las variables booleanas.Podemos convertir casi cualquier tipo de dato a una variable booleana,de esta forma todo valor positivo o texto no vacio sera considerado en Python como un valor Verdadero y el valor 0 o texto vacío como Falso,como en el siguiente caso.</p>
 
 </div>
@@ -19229,9 +19135,7 @@ La diferencia entre a y b es 10 La diferencia entre a y c es 20 y la diferencia 
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -19348,9 +19252,7 @@ False
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -19402,9 +19304,7 @@ False
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -19457,9 +19357,7 @@ K
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[29]:</div>
 
@@ -19520,9 +19418,7 @@ K
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -19583,9 +19479,7 @@ K
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[31]:</div>
 
@@ -19624,9 +19518,7 @@ K
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[32]:</div>
 
@@ -19665,9 +19557,7 @@ K
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[33]:</div>
 
@@ -19706,9 +19596,7 @@ K
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[34]:</div>
 
@@ -19747,9 +19635,7 @@ K
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[35]:</div>
 
@@ -19814,9 +19700,7 @@ K
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[36]:</div>
 
@@ -19867,9 +19751,7 @@ K
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -19995,9 +19877,7 @@ Input <span class="ansi-green-intense-fg ansi-bold">In [37]</span>, in <span cla
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -20054,9 +19934,7 @@ Viernes
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -20116,9 +19994,7 @@ Viernes
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
 
@@ -20170,9 +20046,7 @@ Viernes
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -20243,9 +20117,7 @@ Este i es el numero:  4
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -20326,9 +20198,7 @@ Este i es el numero:  4
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
 
@@ -20395,9 +20265,7 @@ Este i es el numero:  4
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[18]:</div>
 
@@ -20437,9 +20305,7 @@ Este i es el numero:  4
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[20]:</div>
 
@@ -20507,9 +20373,7 @@ Este i es el numero:  4
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
 
@@ -20607,9 +20471,7 @@ Este i es el numero:  4
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
 
@@ -20673,9 +20535,7 @@ Este i es el numero:  4
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -20698,7 +20558,7 @@ es un dia
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>En este caso vemos que al agregar el "\n",inmediatamente todo lo que viene despues se escribe en la linea siguiente...Y por supuesto podriamos volver a utilizarlo si quisieramos escribir cada palabra en una linea nueva</p>
+<p>En este caso vemos que al agregar el &quot;\n&quot;,inmediatamente todo lo que viene despues se escribe en la linea siguiente...Y por supuesto podriamos volver a utilizarlo si quisieramos escribir cada palabra en una linea nueva</p>
 
 </div>
 </div>
@@ -20726,9 +20586,7 @@ es un dia
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -20782,9 +20640,7 @@ dia
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -20834,9 +20690,7 @@ Miercoles es otro dia de la semanaJueves es otro dia de la semana</pre>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -20888,9 +20742,7 @@ El sabado no se trabaja
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
 
@@ -20942,9 +20794,7 @@ El sabado no se trabaja
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
 
@@ -20968,7 +20818,7 @@ El sabado no se trabaja
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>E incluso podriamos determinar la cantidad de letras que tiene la frase <strong>"El sabado no se trabaja"</strong></p>
+<p>E incluso podriamos determinar la cantidad de letras que tiene la frase <strong>&quot;El sabado no se trabaja&quot;</strong></p>
 
 </div>
 </div>
@@ -20995,9 +20845,7 @@ El sabado no se trabaja
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
 
@@ -21050,9 +20898,7 @@ El sabado no se trabaja
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[2]:</div>
 
@@ -21076,7 +20922,7 @@ El sabado no se trabaja
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>En el caso del diccionario numeros,<em>"uno","dos" y "tres"</em> son las llaves y los valores <em>1,2 y 3</em> son los valores.</p>
+<p>En el caso del diccionario numeros,<em>&quot;uno&quot;,&quot;dos&quot; y &quot;tres&quot;</em> son las llaves y los valores <em>1,2 y 3</em> son los valores.</p>
 <p>En este caso podemos acceder a cada uno de los valores mediante las llaves.</p>
 
 </div>
@@ -21104,9 +20950,7 @@ El sabado no se trabaja
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[18]:</div>
 
@@ -21158,9 +21002,7 @@ El sabado no se trabaja
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[19]:</div>
 
@@ -21212,9 +21054,7 @@ El sabado no se trabaja
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[20]:</div>
 
@@ -21270,9 +21110,7 @@ El sabado no se trabaja
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -21328,9 +21166,7 @@ El sabado no se trabaja
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[26]:</div>
 
@@ -21369,9 +21205,7 @@ El sabado no se trabaja
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[27]:</div>
 
@@ -21410,9 +21244,7 @@ El sabado no se trabaja
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
 
@@ -21466,9 +21298,7 @@ El sabado no se trabaja
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
 
@@ -21523,9 +21353,7 @@ El sabado no se trabaja
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
 
@@ -21580,9 +21408,7 @@ El sabado no se trabaja
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
 
@@ -21634,7 +21460,9 @@ El sabado no se trabaja
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Submodulos-en-python">Submodulos en python<a class="anchor-link" href="#Submodulos-en-python">&#182;</a></h2>
+<h2 id="Librer%C3%ADa-Numpy">Librer&#237;a Numpy<a class="anchor-link" href="#Librer%C3%ADa-Numpy">&#182;</a></h2><p>Como ya habiamos dicho uno de los puntos fuertes de la librería <strong>Numpy</strong> son los objetos <strong>array</strong>,que se componen de elementos del mismo tipo y que pueden ser de 1,2 o n dimensiones.Asi podriamos definir una <em>lista</em> o array de 1 dimensión,una <em>matriz</em> o array de 2 dimensiones o tambien un <em>cubo</em> que seria un array de 3 dimensiones.</p>
+<p>Sin embargo primero deberiamos cargar la libreria numpy</p>
+
 </div>
 </div>
 </div>
@@ -21643,14 +21471,10 @@ El sabado no se trabaja
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span>
-
-<span class="n">roll</span><span class="o">=</span><span class="n">numpy</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">low</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">high</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
-<span class="n">roll</span><span class="o">=</span><span class="n">roll</span><span class="o">+</span><span class="mi">10</span>
-<span class="n">roll</span><span class="o">&lt;</span><span class="mi">15</span>
 </pre></div>
 
      </div>
@@ -21665,6 +21489,618 @@ El sabado no se trabaja
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Una vez cargada ya podremos utilizar todas las funciones que vienen dentro de esta libreria.Cabe destacar que podremos cargar la libreria con su nombre por defecto o con una forma abreviada,lo cual nos servira cada vez que llamemos a las funciones dentro de ella.</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>A diferencia de las listas que podemos definir de forma regular en Python,para definir una lista o array de 1 dimension tenemos que</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a1</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">40</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a1</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>[10 20 30 40]
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">De</span> <span class="n">la</span> <span class="n">misma</span> <span class="n">forma</span><span class="p">,</span><span class="n">si</span> <span class="n">quisieramos</span> <span class="n">definir</span> <span class="n">un</span> <span class="n">array</span> <span class="n">de</span> <span class="mi">2</span> <span class="n">dimensiones</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a2</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">40</span><span class="p">],[</span><span class="mi">50</span><span class="p">,</span><span class="mi">60</span><span class="p">,</span><span class="mi">70</span><span class="p">,</span><span class="mi">80</span><span class="p">]])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a2</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>[[10 20 30 40]
+ [50 60 70 80]]
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Y siguiendo con la idea,entonces un array de 3 dimensiones lo podemos definir como sigue</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a3</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[[</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">],[</span><span class="mi">40</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">60</span><span class="p">]],[[</span><span class="mi">70</span><span class="p">,</span><span class="mi">80</span><span class="p">,</span><span class="mi">90</span><span class="p">],[</span><span class="mi">110</span><span class="p">,</span><span class="mi">120</span><span class="p">,</span><span class="mi">130</span><span class="p">]]])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a3</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>[[[ 10  20  30]
+  [ 40  50  60]]
+
+ [[ 70  80  90]
+  [110 120 130]]]
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Por tanto si quisieramos acceder a los elementos de cualquier tipo de array,debemos usar los índices al igual que accedemos a los elementos de una lista,pero seleccionando los índices de cada dimensión.</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Para acceder al elemento de la fila 0 columna 0 del array de 2 dimensiones</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a2</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="c1">#Para acceder al elemento de la fila 1 columna 2 del array de 2 dimensiones</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a2</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>10
+70
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Pero tambien podriamos utilizar algunos métodos para obtener algunas caracteristicas importantes de un array,como las que se muestran en la siguiente tabla.
+|Atributo|Método|Detalle|
+|--|--|--|
+|N° de Dimensión|a.ndim()|Devuelve el número de dimensiones del array <strong>a</strong>.|
+|Dimensiones|a.shape()|Devuelve una tupla con las dimensiones del array <strong>a</strong>.|
+|Tamaño|a.size()|Devuelve el número de elementos del array <strong>a</strong>.|
+|Tipo de dato|a.dtype()|Devuelve el tipo de datos de los elementos del array <strong>a</strong>.|</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[35]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Número de dimensiones para cada uno de los arrays</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ndim</span><span class="p">(</span><span class="n">a1</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ndim</span><span class="p">(</span><span class="n">a2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ndim</span><span class="p">(</span><span class="n">a3</span><span class="p">))</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>1
+2
+3
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Dimensiones para cada uno de los arrays</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">a1</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">a2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">a3</span><span class="p">))</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>(4,)
+(2, 4)
+(2, 2, 3)
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Como se puede ver en el primer caso con el método <strong>a.ndim()</strong>, solo se nos muestra la cantidad de dimensiones,pero con el método <strong>a.shape()</strong> se muestran las dimensiones explicitas.</p>
+<p>Pero incluso podemos realizar operaciones con arrays,incluso si tienen distintas dimensiones y numero de dimensiones,ya que operaran solo sobre aquellas dimensiones disponibles.</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[39]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">a1</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>[20 40 60 80]
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[46]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a2</span><span class="o">/</span><span class="n">a2</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>[[2. 2. 2. 2.]
+ [2. 2. 2. 2.]]
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>De igual forma podriamos realizar operaciones algebraicas con vectores y matrices</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[50]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">b1</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+<span class="n">b2</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="c1">#b1.dot(b2) determina el producto escalar entre los vectores b1 y b2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b1</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">b2</span><span class="p">))</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>4
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Asi tambien podriamos transponer una matriz mediante <strong>a.T</strong>.</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[55]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">a</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>[[1 2 3]
+ [4 5 6]]
+[[1 4]
+ [2 5]
+ [3 6]]
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Incluso podemos resolver sistemas de ecuaciones lineales mediante <strong>solve(a,b)</strong>.</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[57]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># El siguiente es un sistema de 2 ecuaciones lineales con 2 variables</span>
+<span class="c1">#2x+3y=10</span>
+<span class="c1">#4x+5y=8</span>
+
+<span class="n">a</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]])</span>
+<span class="n">b</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span><span class="mi">8</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">))</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>[-13.  12.]
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Algunas otras funciones para trabajar con algebra lineal son las siguientes:</p>
+<p>|Método|Operación |Descripción|
+|--|--|--|
+<strong>a.dot(b)</strong>|Producto escalar|Determina el producto escalar entre los vectores a y b.|
+|<strong>norm(a)</strong>|Módulo de un vector|Determina el módulo del vector v.|
+|<strong>a.dot(b)</strong>|Producto de 2 matrices|Determina el producto matricial de las matrices a y b.|
+|<strong>a.T</strong>|Matriz traspuesta|Determina la matriz traspuesta de la matriz a.|
+|<strong>a.trace()</strong>|Traza de una matriz|Determina la suma diagonal principal de la matriz cuadrada a.|
+|<strong>det(a)</strong>|Determinante de una matriz|Entrega el determinante de la matriz a.|
+|<strong>inv(a)</strong>|Matriz Inversa|Determina la matriz inversa de la matriz cuadrada a.|
+|<strong>eigvals(a)</strong>|Autovalores de una matriz|Determina los autovalores de la matriz cuadrada a.|
+|<strong>eig(a)</strong>|Autovectores de una matriz|Determina los autovectores de la matriz cuadrada a.|
+|<strong>solve(a,b)</strong>|Solución de un sistema de ecuaciones|Determina la solución de un sistema de ecuaciones lineales.|</p>
 
 </div>
 </div>
@@ -21676,7 +22112,7 @@ El sabado no se trabaja
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Trabajando-con-tensorflow">Trabajando con tensorflow<a class="anchor-link" href="#Trabajando-con-tensorflow">&#182;</a></h2>
+<h2 id="Librer%C3%ADa-Matplotlib">Librer&#237;a Matplotlib<a class="anchor-link" href="#Librer%C3%ADa-Matplotlib">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -21702,6 +22138,17 @@ El sabado no se trabaja
 </div>
 </div>
 
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Librer%C3%ADa-Plotly">Librer&#237;a Plotly<a class="anchor-link" href="#Librer%C3%ADa-Plotly">&#182;</a></h2>
+</div>
+</div>
+</div>
 </div>
 </body>
 
