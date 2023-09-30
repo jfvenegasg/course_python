@@ -1,10 +1,10 @@
-# Bienvenido al curso  **Introducción con Python a Data Science**
+# Welcome to the course **Introduction to Data Science with Python**
 
-Este es el repositorio en donde se encuentra el curso de **Introducción con Python a Data Science**,pueden acceder al curso en el siguiente enlace [https://jfvenegasg.github.io/curso_python/](https://jfvenegasg.github.io/curso_python/)
+This is the repository where the **Introduction with Python to Data Science** course is located, you can access the course at the following link [https://jfvenegasg.github.io/curso_python/](https://jfvenegasg .github.io/course_python/)
 
 <center>
 <img src=https://media.geeksforgeeks.org/wp-content/uploads/20230222183754/Data-Science-Fir-beginner.png>
 
-En este curso introductorio podran comenzar a trabajar con python desde un punto de vista funcional,pudiendo ir desde los conceptos basicos como la definición de variables hasta la carga y uso de bibliotecas de visualización como Plotly y de modelos de Machine Learning clasicos como la regresion lineal y la regresión logistica con la biblioteca Scikit-Learn.
+In this introductory course you will be able to start working with Python from a functional point of view, ranging from basic concepts such as defining variables to loading and using visualization libraries such as Plotly and classic Machine Learning models such as linear regression. and logistic regression with the Scikit-Learn library.
 
-Saludos 📚
+Greetings 📚
