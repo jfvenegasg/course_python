@@ -15297,7 +15297,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">function_balance</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
@@ -15406,18 +15406,19 @@ function_balance(name)
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[67]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">funcion_saldo</span><span class="p">(</span><span class="n">nombre</span><span class="p">):</span>
-    <span class="sd">"""Esta es la ayuda de la funcion.Esta función genera un </span>
-<span class="sd">    mensaje de salida con el nombre que se le entrega y el saldo que </span>
-<span class="sd">    por defecto se encuentra en 100"""</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">function_balance</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="sd">"""This is the help of the function_balance.This function</span>
+<span class="sd">    print of message with the input name and the default balance</span>
+<span class="sd">    is 100</span>
+<span class="sd">    """</span>
     
-    <span class="n">saldo</span><span class="o">=</span><span class="mi">100</span>
-    <span class="k">return</span> <span class="nb">print</span><span class="p">(</span><span class="s2">"Buen dia: "</span><span class="p">,</span><span class="n">nombre</span><span class="p">,</span><span class="s2">"su saldo en cuenta es de:"</span><span class="p">,</span><span class="n">saldo</span><span class="p">)</span>
+    <span class="n">balance</span><span class="o">=</span><span class="mi">100</span>
+    <span class="k">return</span> <span class="nb">print</span><span class="p">(</span><span class="s2">"Good morning: "</span><span class="p">,</span><span class="n">name</span><span class="p">,</span><span class="s2">"the balance in your account:"</span><span class="p">,</span><span class="n">balance</span><span class="p">)</span>
 
-<span class="n">help</span><span class="p">(</span><span class="n">funcion_saldo</span><span class="p">)</span>
+<span class="n">help</span><span class="p">(</span><span class="n">function_balance</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15437,12 +15438,12 @@ function_balance(name)
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Help on function funcion_saldo in module __main__:
+<pre>Help on function function_balance in module __main__:
 
-funcion_saldo(nombre)
-    Esta es la ayuda de la funcion.Esta función genera un 
-    mensaje de salida con el nombre que se le entrega y el saldo que 
-    por defecto se encuentra en 100
+function_balance(name)
+    This is the help of the function_balance.This function
+    print of message with the input name and the default balance
+    is 100
 
 </pre>
 </div>
@@ -15459,9 +15460,9 @@ funcion_saldo(nombre)
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>In this case, the help information of the function is provided. However, we can add more detailed information to the description of the function using the triple quotes <strong>&quot;&quot;&quot;</strong> within it.A diferencia del código anterior, ahora si se muestra de forma explícita que es lo que hace la función, lo cual se agrego en la nueva definición de la función <strong>&quot;funcion_saldo&quot;</strong>.</p>
-<p>Pero también podemos definir funciones que realicen algunas operaciones mas extensas,asi como operaciones matemáticas que tomen distintos valores segun las variables que se le definan a la función.</p>
-<p>En este caso la funcion <strong>diferencia</strong>,determina las diferencias absolutas que existen entre 3 variables <strong>a</strong>,<strong>b</strong> y <strong>c</strong>.Asi, las diferencias se determinan al interior de la función y luego se retornan junto al texto que muestra entre que pares de variables se determinan las diferencias,cabe destacar que para esta función tambien se escribio la ayuda.</p>
+<p>In this case, the help information of the function is provided. However, we can add more detailed information to the description of the function using the triple quotes <strong>&quot;&quot;&quot;</strong> within it.Unlike the previous code, now it is explicitly shown what the function does, which was added in the new definition of the function <strong>&quot;function_balance&quot;</strong>.</p>
+<p>But we can also define functions that perform some more extensive operations, as well as mathematical operations that take different values depending on the variables defined for the function.</p>
+<p>In this case the <strong>difference</strong> function determines the absolute differences that exist between 3 variables <strong>a</strong>, <strong>b</strong> and <strong>c</strong>. Thus, the differences are determined inside the function and then they are returned along with the text that shows which pairs of variables the differences are determined. It should be noted that the help was also written for this function.</p>
 
 </div>
 </div>
@@ -15471,19 +15472,21 @@ funcion_saldo(nombre)
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[68]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">diferencia</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">):</span>
-    <span class="sd">""" Esta funcion retorna la diferencia entre 3 valores que se le entregan"""</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">difference</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">):</span>
+    <span class="sd">""" This function return the difference between three values that are delivered"""</span>
+    
     <span class="n">dif1</span><span class="o">=</span><span class="nb">abs</span><span class="p">(</span><span class="n">a</span><span class="o">-</span><span class="n">b</span><span class="p">)</span>
     <span class="n">dif2</span><span class="o">=</span><span class="nb">abs</span><span class="p">(</span><span class="n">a</span><span class="o">-</span><span class="n">c</span><span class="p">)</span>
     <span class="n">dif3</span><span class="o">=</span><span class="nb">abs</span><span class="p">(</span><span class="n">b</span><span class="o">-</span><span class="n">c</span><span class="p">)</span>
-    <span class="k">return</span> <span class="nb">print</span><span class="p">(</span><span class="s2">"La diferencia entre a y b es"</span><span class="p">,</span><span class="n">dif1</span><span class="p">,</span><span class="s2">"La diferencia entre a y c es"</span><span class="p">,</span><span class="n">dif2</span><span class="p">,</span><span class="s2">"y la diferencia entre b y c es"</span><span class="p">,</span><span class="n">dif3</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">print</span><span class="p">(</span><span class="s2">"The difference between a and b is"</span><span class="p">,</span><span class="n">dif1</span><span class="p">,</span><span class="s2">"The difference between a and c is"</span><span class="p">,</span><span class="n">dif2</span><span class="p">,</span><span class="s2">"and the difference between b and c is"</span><span class="p">,</span><span class="n">dif3</span><span class="p">)</span>
+    
 
-<span class="n">help</span><span class="p">(</span><span class="n">diferencia</span><span class="p">)</span>
+<span class="n">help</span><span class="p">(</span><span class="n">difference</span><span class="p">)</span>
 
-<span class="n">diferencia</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">)</span>
+<span class="n">difference</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15503,12 +15506,12 @@ funcion_saldo(nombre)
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Help on function diferencia in module __main__:
+<pre>Help on function difference in module __main__:
 
-diferencia(a, b, c)
-    Esta funcion retorna la diferencia entre 3 valores que se le entregan
+difference(a, b, c)
+    This function return the difference between three values that are delivered
 
-La diferencia entre a y b es 10 La diferencia entre a y c es 20 y la diferencia entre b y c es 10
+The difference between a and b is 10 The difference between a and c is 20 and the difference between b and c is 10
 </pre>
 </div>
 </div>
