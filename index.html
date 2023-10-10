@@ -14650,7 +14650,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <li><a href="#Hello-Python">Hello Python</a></li>
 <li><a href="#Functions">Functions</a></li>
 <li><a href="#Booleans-and-conditionals">Booleans and conditionals</a></li>
-<li><a href="#Listas">Listas</a></li>
+<li><a href="#Lists">Lists</a></li>
 <li><a href="#Ciclos">Ciclos</a></li>
 <li><a href="#Diccionarios">Diccionarios</a></li>
 <li><a href="#Trabajando-con-librerias">Trabajando con librerias</a></li>
@@ -15792,8 +15792,8 @@ The difference between a and b is 10 The difference between a and c is 20 and th
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Funciones-y-condiciones">Funciones y condiciones<a class="anchor-link" href="#Funciones-y-condiciones">&#182;</a></h2><p>Como vimos en el código anterior podemos verificar el valor asignado a una variable numérica,booleana o string,mediante un operador y una condición. Esto debido a que si una variable cumple cierta condición,se ejecuta un bloque de código,sino se ejecuta otro bloque de código.</p>
-<p>Aunque también podemos verificar si se cumple mas de una condición, como en la siguiente función inspector.</p>
+<h2 id="Functions-and-conditions">Functions and conditions<a class="anchor-link" href="#Functions-and-conditions">&#182;</a></h2><p>As we saw in the previous code we can verify the value assigned to a numeric, boolean or string variable, using an operator and a condition. This is because if a variable meets a certain condition, a block of code is executed, otherwise another block of code is executed.</p>
+<p>Although we can also verify if more than one condition is met, as in the following inspector function.</p>
 
 </div>
 </div>
@@ -15803,19 +15803,19 @@ The difference between a and b is 10 The difference between a and c is 20 and th
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[73]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">inspector</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">checker</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">x</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="s2">"Es cero"</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="s2">"Is zero"</span><span class="p">)</span>
     <span class="k">elif</span> <span class="n">x</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="s2">"Es positivo"</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="s2">"Is positive"</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span> 
-        <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="s2">"Es negativo"</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="s2">"Is negative"</span><span class="p">)</span>
 
-<span class="n">inspector</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">inspector</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">checker</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">checker</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15835,8 +15835,8 @@ The difference between a and b is 10 The difference between a and c is 20 and th
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>0 Es cero
--10 Es negativo
+<pre>0 Is zero
+-10 Is negative
 </pre>
 </div>
 </div>
@@ -15852,9 +15852,9 @@ The difference between a and b is 10 The difference between a and c is 20 and th
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>En este caso la función una vez que se le entrega un valor numérico,es capaz de determinar <em>si es igual a 0</em>,<em>mayor a 0</em> o incluso <em>si es menor que 0</em>.</p>
-<p>Esto se realiza mediante la condición <strong>if</strong>,en donde esta condición if verifica que se cumpla la condición <strong>x==0</strong>,sino se cumple se utiliza la verificación de que sea mayor a 0 con <strong>elif</strong> y si no se cumple ninguna de las 2 anteriores se ejecuta el ultimo bloque de código correspondiente al <strong>print(x,&quot;Es negativo&quot;)</strong>.</p>
-<p>Algunas últimas consideraciones para las variables booleanas.Podemos convertir casi cualquier tipo de dato a una variable booleana,de esta forma todo valor positivo o texto no vacío sera considerado en Python como un valor Verdadero y el valor 0 o texto vacío como Falso,como en el siguiente caso.</p>
+<p>In this case, the function, once it is given a numerical value, is able to determine <em>if it is equal to 0</em>, <em>greater than 0</em> or even <em>if it is less than 0</em>.</p>
+<p>This is done through the <strong>if</strong> condition, where this if condition verifies that the condition <strong>x==0</strong> is met, if not met, the verification that it is greater than 0 is used with <strong>elif* * and if none of the previous two are met, the last block of code corresponding to </strong>print(x,&quot;It is negative&quot;)** is executed.</p>
+<p>Some last considerations for Boolean variables. We can convert almost any type of data to a Boolean variable, in this way every positive value or non-empty text will be considered in Python as a True value and the value 0 or empty text as False, as in the next case.</p>
 
 </div>
 </div>
@@ -15864,11 +15864,11 @@ The difference between a and b is 10 The difference between a and c is 20 and th
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[74]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">bool</span><span class="p">(</span><span class="mi">12</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">bool</span><span class="p">(</span><span class="s2">"hola"</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">bool</span><span class="p">(</span><span class="s2">"Hi"</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">bool</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">bool</span><span class="p">(</span><span class="s2">""</span><span class="p">))</span>
 </pre></div>
