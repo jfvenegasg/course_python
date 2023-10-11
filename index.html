@@ -15911,8 +15911,8 @@ False
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><a id='Lists'></a></p>
 <h3 id="Lists-%F0%9F%8F%97">Lists &#127959;<a class="anchor-link" href="#Lists-%F0%9F%8F%97">&#182;</a></h3><p><a href="#Index">Index ▲</a></p>
-<p>Las listas en python son una estructura de datos similar a lo que hacemos con las variables que ya conocemos,pero nos permiten realizar operaciones mas complejas.</p>
-<p>De esta forma en una lista podemos almacenar una secuencia de valores, como las listas generadas para las variables <strong>primos</strong> y <strong>días</strong> a continuación.</p>
+<p>Lists in Python are a data structure similar to what we do with the variables we already know, but they allow us to perform more complex operations.</p>
+<p>This way in a list we can store a sequence of values, like the lists generated for the <strong>primes</strong> and <strong>days</strong> variables below.</p>
 
 </div>
 </div>
@@ -15922,12 +15922,12 @@ False
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[75]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">primos</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">primes</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">]</span>
 
-<span class="n">dias</span><span class="o">=</span><span class="p">[</span><span class="s2">"Lunes"</span><span class="p">,</span><span class="s2">"Martes"</span><span class="p">,</span><span class="s2">"Miercoles"</span><span class="p">,</span><span class="s2">"Jueves"</span><span class="p">,</span><span class="s2">"Viernes"</span><span class="p">]</span>
+<span class="n">days</span><span class="o">=</span><span class="p">[</span><span class="s2">"Monday"</span><span class="p">,</span><span class="s2">"Tuesday"</span><span class="p">,</span><span class="s2">"Wednesday"</span><span class="p">,</span><span class="s2">"Thursday"</span><span class="p">,</span><span class="s2">"Friday"</span><span class="p">]</span>
 </pre></div>
 
      </div>
@@ -15942,8 +15942,8 @@ False
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Como se puede ver ambas son listas, sin embargo en la primera almacenamos solo valores númericos y en la segunda se guardan string.</p>
-<p>Pero lo podemos llevar un poco más allá y crear una lista de listas 👀</p>
+<p>As you can see, both are lists, however in the first we store only numerical values and in the second we store strings.</p>
+<p>But we can take it a little further and create a list of lists 👀</p>
 
 </div>
 </div>
@@ -15953,10 +15953,10 @@ False
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[76]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cartas</span><span class="o">=</span><span class="p">[[</span><span class="s2">"j"</span><span class="p">,</span><span class="s2">"q"</span><span class="p">,</span><span class="s2">"k"</span><span class="p">],[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">],[</span><span class="mi">5</span><span class="p">,</span><span class="s2">"A"</span><span class="p">,</span><span class="s2">"K"</span><span class="p">]]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cards</span><span class="o">=</span><span class="p">[[</span><span class="s2">"j"</span><span class="p">,</span><span class="s2">"q"</span><span class="p">,</span><span class="s2">"k"</span><span class="p">],[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">],[</span><span class="mi">5</span><span class="p">,</span><span class="s2">"A"</span><span class="p">,</span><span class="s2">"K"</span><span class="p">]]</span>
 </pre></div>
 
      </div>
@@ -15971,8 +15971,8 @@ False
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>En este caso generamos una lista compuesta por <strong>3 listas</strong>,sin embargo cada una de estas listas es diferente.La primera solo contiene valores <strong>string</strong>,la segunda solo valores <strong>numéricos</strong> y la tercera contiene tanto valores numericos como string.</p>
-<p>Ya que tenemos una lista que tiene una estructura mas extensa,podríamos querer seleccionar alguno de sus valores y no siempre tratar con la lista <strong>cartas</strong> completa.Asi podriamos seleccionar</p>
+<p>In this case we generate a list composed of <strong>3 lists</strong>, however each of these lists is different. The first only contains <strong>string</strong> values, the second only <strong>numeric</strong> values and the third contains both numeric values as string.</p>
+<p>Since we have a list that has a more extensive structure, we might want to select some of its values and not always deal with the entire <strong>cards</strong> list. So we could select</p>
 
 </div>
 </div>
@@ -15982,12 +15982,12 @@ False
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[77]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">cartas</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">cards</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">cartas</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cards</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
 </pre></div>
 
      </div>
@@ -16024,7 +16024,7 @@ False
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Asi podemos seleccionar la segunda lista de cartas o incluso seleccionar la tercera lista de cartas.Pero incluso podríamos seleccionar uno de los elementos de estas listas como en el siguiente bloque.</p>
+<p>So we can select the second list of cards or even select the third list of cards. But we could even select one of the elements of these lists as in the next block.</p>
 
 </div>
 </div>
@@ -16034,12 +16034,12 @@ False
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[78]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">cartas</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">cards</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">cartas</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">2</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cards</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">2</span><span class="p">])</span>
 </pre></div>
 
      </div>
@@ -16076,8 +16076,8 @@ K
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Ahi se puede ver como podemos seleccionar el primer elemento de la segunda lista obteniendo el valor de <strong>2</strong> o seleccionar el tercer elemento de la tercera lista obteniendo el string <strong>K</strong>.</p>
-<p>Pero si una vez que definimos la lista carta,queremos agregar una nueva mano... perdón una nueva lista,podemos hacerlo con la siguiente asignación.</p>
+<p>There you can see how we can select the first element of the second list obtaining the value of <strong>2</strong> or select the third element of the third list obtaining the string <strong>K</strong>.</p>
+<p>But if once we define the card list, we want to add a new hand... sorry a new list, we can do it with the following assignment.</p>
 
 </div>
 </div>
@@ -16130,7 +16130,7 @@ K
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Ahora como era de esperar,también podemos utilizar algunas funciones sobre estas listas.En este caso podríamos querer determinar la cantidad de días que tiene la variable días 😅... o incluso ordenar los días de forma alfabética ... o incluso operaciones matemáticas como la suma de los números primos o determinar el máximo de ellos.</p>
+<p>Now as expected, we can also use some functions on these lists. In this case we might want to determine the number of days that the days variable has 😅... or even sort the days alphabetically... or even mathematical operations like the sum of the prime numbers or determine the maximum of them.</p>
 
 </div>
 </div>
@@ -16140,20 +16140,20 @@ K
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[80]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Cuantos dias hay en una semana</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">dias</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># How many days are there in a week</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">days</span><span class="p">))</span>
 
-<span class="c1"># Ordenar los dias de forma alfabetica</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">dias</span><span class="p">))</span>
+<span class="c1"># Sort the days alphabetically</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">days</span><span class="p">))</span>
 
-<span class="c1"># suma de los numeros primos</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">primos</span><span class="p">))</span>
+<span class="c1"># sum of prime numbers</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">primes</span><span class="p">))</span>
 
-<span class="c1"># maximo de los numeros primos</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">primos</span><span class="p">))</span>
+<span class="c1">#maximum  of prime numbers</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">primes</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -16174,7 +16174,7 @@ K
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>5
-[&#39;Jueves&#39;, &#39;Lunes&#39;, &#39;Martes&#39;, &#39;Miercoles&#39;, &#39;Viernes&#39;]
+[&#39;Friday&#39;, &#39;Monday&#39;, &#39;Thursday&#39;, &#39;Tuesday&#39;, &#39;Wednesday&#39;]
 17
 7
 </pre>
