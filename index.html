@@ -16540,7 +16540,9 @@ Cell <span class="ansi-green-intense-fg ansi-bold">In [87], line 1</span>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="mf">0.125</span>
+
 <span class="n">numerator</span><span class="p">,</span><span class="n">denominator</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">as_integer_ratio</span><span class="p">()</span>
+
 <span class="nb">print</span><span class="p">(</span><span class="n">numerator</span><span class="o">/</span><span class="n">denominator</span><span class="p">)</span>
 </pre></div>
 
@@ -16577,9 +16579,9 @@ Cell <span class="ansi-green-intense-fg ansi-bold">In [87], line 1</span>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><a id='Ciclos'></a></p>
-<h3 id="Ciclos-%F0%9F%8E%B0">Ciclos &#127920;<a class="anchor-link" href="#Ciclos-%F0%9F%8E%B0">&#182;</a></h3><p><a href="#Index">Index ▲</a></p>
-<p>Todo en la vida es un ciclo... bueno no precisamente como los que vamos a ver ahora,pero sin duda que mucho tienen en común con la repetición de rutinas.Como hemos visto podemos definir listas de <em>cadenas de texto</em>,en este caso podemos definir una lista con los días de la semana.</p>
+<p><a id='Cycles'></a></p>
+<h3 id="Cycles-%F0%9F%8E%B0">Cycles &#127920;<a class="anchor-link" href="#Cycles-%F0%9F%8E%B0">&#182;</a></h3><p><a href="#Index">Index ▲</a></p>
+<p>Life has many cycles... well not exactly like the ones we are going to see now, but they certainly have a lot in common with routines. As we have seen we can define lists of <em>text strings</em>, in this case we can define a list with the days of the week.</p>
 
 </div>
 </div>
@@ -16591,7 +16593,7 @@ Cell <span class="ansi-green-intense-fg ansi-bold">In [87], line 1</span>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="Ciclo-for">Ciclo for<a class="anchor-link" href="#Ciclo-for">&#182;</a></h4>
+<h4 id="Loop-for">Loop for<a class="anchor-link" href="#Loop-for">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -16603,7 +16605,7 @@ Cell <span class="ansi-green-intense-fg ansi-bold">In [87], line 1</span>
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dias</span><span class="o">=</span><span class="p">[</span><span class="s2">"Lunes"</span><span class="p">,</span><span class="s2">"Martes"</span><span class="p">,</span><span class="s2">"Miercoles"</span><span class="p">,</span><span class="s2">"Jueves"</span><span class="p">,</span><span class="s2">"Viernes"</span><span class="p">,</span><span class="s2">"Sabado"</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">days</span><span class="o">=</span><span class="p">[</span><span class="s2">"Monday"</span><span class="p">,</span><span class="s2">"Tuesday"</span><span class="p">,</span><span class="s2">"Wednesday"</span><span class="p">,</span><span class="s2">"Thursday"</span><span class="p">,</span><span class="s2">"Friday"</span><span class="p">,</span><span class="s2">"Saturday"</span><span class="p">]</span>
 </pre></div>
 
      </div>
@@ -16618,7 +16620,7 @@ Cell <span class="ansi-green-intense-fg ansi-bold">In [87], line 1</span>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Y podríamos ir mostrando por pantalla cada uno de los días con un ciclo for</p>
+<p>And we could show each day on the screen with a for loop</p>
 
 </div>
 </div>
@@ -16631,7 +16633,7 @@ Cell <span class="ansi-green-intense-fg ansi-bold">In [87], line 1</span>
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">dias</span><span class="p">:</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">days</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </pre></div>
 
@@ -16647,23 +16649,23 @@ Cell <span class="ansi-green-intense-fg ansi-bold">In [87], line 1</span>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Como se puede ver el ciclo <strong>for</strong> itera la variable <strong>i</strong> sobre la lista <strong>días</strong>,asi va tomando cada uno de los valores e imprime el día por pantalla.</p>
-<p>En cambio si tomaramos una lista numérica y la iteramos de igual forma,solo imprimiria los valores numéricos de esta lista.</p>
+<p>As you can see, the <strong>for</strong> loop iterates the variable <strong>i</strong> over the list <strong>days</strong>, taking each of the values and printing the day on the screen.</p>
+<p>On the other hand, if we took a numerical list and iterated it in the same way, it would only print the numerical values of this list.</p>
 
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">numeros</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">numbers</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
 
-<span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">numeros</span><span class="p">:</span>
+<span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>    
 </pre></div>
 
@@ -16672,6 +16674,31 @@ Cell <span class="ansi-green-intense-fg ansi-bold">In [87], line 1</span>
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>1
+2
+3
+4
+5
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
@@ -16679,27 +16706,27 @@ Cell <span class="ansi-green-intense-fg ansi-bold">In [87], line 1</span>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Así podemos ver que en este caso cambiamos la lista para luego iterar con una nueva variable,en este caso j.</p>
-<p>Además no solo podemos iterar los valores en una lista, también podriamos realizar alguna operación dentro del ciclo, en este caso definimos una nueva lista y luega la variable producto.</p>
+<p>So we can see that in this case we change the list and then iterate with a new variable, in this case j.</p>
+<p>Furthermore, we can not only iterate the values in a list, we could also perform some operation within the loop, in this case we define a new list and then the product variable.</p>
 
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">multiplicativos</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
-<span class="n">producto</span><span class="o">=</span><span class="mi">1</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">multiplicative</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">product</span><span class="o">=</span><span class="mi">1</span>
 
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">multiplicativos</span><span class="p">:</span>
-    <span class="n">producto</span><span class="o">=</span><span class="n">producto</span><span class="o">*</span><span class="n">i</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">multiplicative</span><span class="p">:</span>
+     <span class="n">product</span><span class="o">=</span><span class="n">product</span><span class="o">*</span><span class="n">i</span>
 
-<span class="n">producto</span>
+<span class="n">product</span>
 </pre></div>
 
      </div>
@@ -16707,6 +16734,29 @@ Cell <span class="ansi-green-intense-fg ansi-bold">In [87], line 1</span>
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>360</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
@@ -16714,26 +16764,51 @@ Cell <span class="ansi-green-intense-fg ansi-bold">In [87], line 1</span>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>En este caso el ciclo <strong>for</strong> itera los valores de lista <strong>multiplicativos</strong> y luego en cada iteración multiplica el valor de la variable <em>producto</em> por el valor de <em>multiplicativos</em> y lo almacena.</p>
+<p>In this case the <strong>for</strong> loop iterates the <strong>multiplicative</strong> list values and then in each iteration it multiplies the value of the <em>product</em> variable by the value of <em>multiplicatives</em> and stores it.</p>
 
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"Este i es el numero: "</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>
+     <span class="nb">print</span><span class="p">(</span><span class="s2">"This i is the number: "</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>This i is the number:  0
+This i is the number:  1
+This i is the number:  2
+This i is the number:  3
+This i is the number:  4
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -16743,7 +16818,7 @@ Cell <span class="ansi-green-intense-fg ansi-bold">In [87], line 1</span>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Retomando el primer ciclo,también podriamos utilizar la función <strong>range()</strong>, para optimizar la iteración de la variable <strong>i</strong>.Así no es necesario definir la lista a iterar y solo asignamos el valor hasta el que deseamos iterar a la función <strong>range()</strong>.</p>
+<p>Returning to the first cycle, we could also use the <strong>range()</strong> function, to optimize the iteration of the variable <strong>i</strong>. Thus it is not necessary to define the list to iterate and we only assign the value up to which we want to iterate to the <strong>range()</strong> function.</p>
 
 </div>
 </div>
