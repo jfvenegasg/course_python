@@ -14651,7 +14651,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <li><a href="#Functions">Functions</a></li>
 <li><a href="#Booleans-and-conditionals">Booleans and conditionals</a></li>
 <li><a href="#Lists">Lists</a></li>
-<li><a href="#Ciclos">Ciclos</a></li>
+<li><a href="#Cycles">Cycles</a></li>
 <li><a href="#Diccionarios">Diccionarios</a></li>
 <li><a href="#Trabajando-con-librerias">Trabajando con librerias</a></li>
 <li><a href="#Librer%C3%ADa-Numpy">Libreria Numpy</a></li>
@@ -16830,19 +16830,19 @@ This i is the number:  4
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="Ciclo-While">Ciclo While<a class="anchor-link" href="#Ciclo-While">&#182;</a></h4><p>Además del ciclo for que vimos en la sección anterior,también podemos querer iterar una lista o un proceso mientras se cumpla una cierta condición.Para esto utilizamos el ciclo <strong>while</strong>,que a diferencia del caso anterior en donde iteramos una variable,para el ciclo while esperamos que mientras se cumpla una condición se ejecutaran las intrucciones que estan dentro de el.</p>
-<p>Cabe destacar que para el ciclo <strong>while</strong> hay que tener una consideración especial,ya que si la condición que establecemos no se cumple nunca el ciclo while se ejecuta de forma infinita pudiendo ocasionar que el software o el pc consuma toda la memoria y teniendo que reinciar el proceso o incluso el pc.</p>
-<p>A continuación se define el valor de la variable <strong>i=0</strong>,entonces el ciclo comienza validando esta condición,como es verdadera luego imprime el valor de la variable y luego <strong>i=i+1</strong>.Finalmente esta operación se repite hasta que i toma el valor 9,ya que al tomar el valor 10,la condición <strong>i&lt;10</strong> ya no es verdadera.</p>
+<h4 id="While-Loop">While Loop<a class="anchor-link" href="#While-Loop">&#182;</a></h4><p>In addition to the for loop that we saw in the previous section, we may also want to iterate a list or a process while a certain condition is met. For this we use the <strong>while</strong> loop, which unlike the previous case where we iterate a variable, For the while loop we expect that as long as a condition is met, the instructions within it will be executed.</p>
+<p>It should be noted that for the <strong>while</strong> loop, special consideration must be taken, since if the condition we establish is never met, the while loop is executed infinitely, potentially causing the software or the PC to consume all the memory and having to restart the process or even the PC.</p>
+<p>Next, the value of the variable <strong>i=0</strong> is defined, then the loop begins by validating this condition, as it is true it then prints the value of the variable and then <strong>i=i+1</strong>. Finally this operation It is repeated until i takes the value 9, since when it takes the value 10, the condition <strong>i&lt;10</strong> is no longer true.</p>
 
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">i</span><span class="o">=</span><span class="mi">0</span>
@@ -16857,6 +16857,26 @@ This i is the number:  4
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>0 1 2 3 4 5 6 7 8 9 </pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
@@ -16864,7 +16884,7 @@ This i is the number:  4
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>En cambio si ejecutamos el siguiente bloque el ciclo se ejecuta de forma infinita ya que la condición siempre sera cierta,provocando que el software colapse y se cierre... 🔥</p>
+<p>On the other hand, if we execute the next block, the cycle is executed infinitely since the condition will always be true, causing the software to collapse and close... 🔥</p>
 
 </div>
 </div>
@@ -16896,17 +16916,17 @@ This i is the number:  4
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Otro aspecto importante en Python,es que cuando definimos una lista es posible utilizar ciclos dentro de ellas.En algunos casos solo requerimos de algunos valores dentro de una lista,pero si buscamos crear una sucesión que tenga una mayor extensión,como tal vez una lista con los valores del 1 al 20 una forma sencilla de escribirla seria de la siguiente forma:</p>
+<p>Another important aspect in Python is that when we define a list it is possible to use loops within them. In some cases we only require some values within a list, but if we seek to create a sequence that has a greater length, such as perhaps a list With the values from 1 to 20, a simple way to write it would be as follows:</p>
 
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">serie_1</span><span class="o">=</span><span class="p">[</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">21</span><span class="p">)]</span>
@@ -16918,6 +16938,29 @@ This i is the number:  4
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[2]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
@@ -16925,7 +16968,7 @@ This i is the number:  4
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Recordar que en Python el límite superior esta especificado por el valor siguiente,es por eso que dentro de la función range() utilizamos 21 y no 20.</p>
+<p>Remember that in Python the upper limit is specified by the following value, that is why within the range() function we use 21 and not 20.</p>
 
 </div>
 </div>
@@ -16937,21 +16980,21 @@ This i is the number:  4
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Pero no siempre necesitaremos crear las mismas listas en algunos casos podriamos necesitar que la lista comience o termine en valores distintos.Paro lo cual podríamos hacer uso de las funciones... las cuales son nuestro mejor aliado cuando queremos encapsular un proceso que realizamos con mucha frecuencia 📲</p>
+<p>But we will not always need to create the same lists, in some cases we could need the list to start or end with different values. For this we could make use of the functions... which are our best ally when we want to encapsulate a process that we carry out with great care. frequency 📲</p>
 
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">listas</span><span class="p">(</span><span class="n">inicio</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">termino</span><span class="o">=</span><span class="mi">5</span><span class="p">):</span>
-    <span class="k">return</span> <span class="p">[</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">inicio</span><span class="p">,</span><span class="n">termino</span><span class="p">)]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">lists</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">end</span><span class="o">=</span><span class="mi">5</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">start</span><span class="p">,</span><span class="n">end</span><span class="p">)]</span>
 
 <span class="n">l1</span><span class="o">=</span><span class="n">listas</span><span class="p">()</span>
 <span class="n">l1</span>
@@ -16962,21 +17005,67 @@ This i is the number:  4
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>[1, 2, 3, 4]</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">l2</span><span class="o">=</span><span class="n">listas</span><span class="p">(</span><span class="n">inicio</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="n">termino</span><span class="o">=</span><span class="mi">21</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">l2</span><span class="o">=</span><span class="n">lists</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="n">end</span><span class="o">=</span><span class="mi">21</span><span class="p">)</span>
 <span class="n">l2</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>[10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]</pre>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -16986,7 +17075,7 @@ This i is the number:  4
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Como se ve en el primer bloque,una vez que definimos la función <strong>listas</strong> y la llamamos para crear nuestra primera lista <strong>l1</strong>,se crea la lista con los valores por defecto.Sin embargo cuando la llamamos para crear la lista <strong>l2</strong> con diferentes límites,inmediatamente se crea la lista con los valores que comienzan en el 10 y terminan en el 20.📌</p>
+<p>As seen in the first block, once we define the <strong>lists</strong> function and call it to create our first list <strong>l1</strong>, the list is created with the default values. However, when we call it to create the list <strong>l2</strong> with different limits, the list is immediately created with the values that start at 10 and end at 20.📌</p>
 
 </div>
 </div>
@@ -16999,7 +17088,7 @@ This i is the number:  4
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><a id='Diccionarios'></a></p>
-<h3 id="Diccionarios-%F0%9F%93%97">Diccionarios &#128215;<a class="anchor-link" href="#Diccionarios-%F0%9F%93%97">&#182;</a></h3><p><a href="#Indice">Inicio ▲</a></p>
+<h3 id="Diccionarios-%F0%9F%93%97">Diccionarios &#128215;<a class="anchor-link" href="#Diccionarios-%F0%9F%93%97">&#182;</a></h3><p><a href="#Index">Index ▲</a></p>
 <p>Hasta este punto del curso,ya hemos visto la mayoría de los aspectos importantes para comenzar al menos a trabajar con Python,sin embargo uno de los puntos en donde Python es excelente es con la manipulación de strings o cadenas de texto.</p>
 <p>Si bien ya hemos definido y realizado algunas operaciones con strings,siempre es bueno repasar antes de pasar a lo mas interesante de esta sección...los diccionarios. 📚</p>
 <p>Habíamos visto que se podian definir algunas cadenas de texto y almacenarlas en variables como las que se muestran a continuación</p>
